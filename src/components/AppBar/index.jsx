@@ -2,8 +2,8 @@ import { View, StyleSheet, ScrollView } from 'react-native';
 import { useNavigate } from 'react-router-native';
 
 import AppBarTab from './AppBarTab'
-import config from '../config'
-import themes from '../themes'
+import config from '../../utils/config'
+import themes from '../../utils/themes'
 
 const styles = StyleSheet.create({
   container: {

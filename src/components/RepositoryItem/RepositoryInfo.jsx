@@ -1,7 +1,7 @@
 import { Image, View, StyleSheet } from 'react-native';
-import Text from './Text'
-import config from '../config'
-import themes from '../themes'
+import Text from '../Text'
+import config from '../../utils/config'
+import themes from '../../utils/themes'
 
 const styles = StyleSheet.create({
     parentContainer: {

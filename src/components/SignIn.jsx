@@ -4,8 +4,8 @@ import Text from './Text'
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 
-import themes from '../themes'
-import config from '../config'
+import themes from '../utils/themes'
+import config from '../utils/config'
 
 const styles = StyleSheet.create({
   container: {
