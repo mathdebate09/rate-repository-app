@@ -1,4 +1,5 @@
-import { Text, Image, View, StyleSheet } from 'react-native';
+import { Image, View, StyleSheet } from 'react-native';
+import Text from './Text'
 import config from '../config'
 import themes from '../themes'
 

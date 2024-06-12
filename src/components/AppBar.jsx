@@ -1,4 +1,6 @@
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, ScrollView } from 'react-native';
+import { useNavigate } from 'react-router-native';
+
 import AppBarTab from './AppBarTab'
 import config from '../config'
 import themes from '../themes'
@@ -14,13 +16,27 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     columnGap: 20
+  },
+  horizontalFlow: {
+    display: 'flex',
+    flexDirection: 'row',
+    columnGap: 20
   }
 });
 
 const AppBar = () => {
-  return <View style={styles.container}>
-    <AppBarTab text={'Repositories'}/>
-  </View>;
+  const navigate = useNavigate();
+
+  return (
+    <View style={styles.container}>
+      <ScrollView horizontal >
+        <View style={styles.horizontalFlow}>
+          <AppBarTab text={'Repositories'} onPress={() => navigate("/")} />
+          <AppBarTab text={'Sign In'} onPress={() => navigate("/login")} />
+        </View>
+      </ScrollView>
+    </View>
+  );
 };
 
 export default AppBar;

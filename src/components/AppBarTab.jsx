@@ -1,18 +1,22 @@
-import { Text, View, StyleSheet, Pressable } from 'react-native';
-import themes from '../themes'
+import React from 'react';
+import { StyleSheet, Pressable } from 'react-native';
+import themes from '../themes';
+import Text from './Text'
 
 const styles = StyleSheet.create({
-    text: {
-        color: themes.textColor.secondary,
-        fontWeight: 'bold',
-        fontSize: 17,
-    }
+  text: {
+    color: themes.textColor.secondary,
+    fontWeight: 'bold',
+    fontSize: 17
+  }
 });
 
-const AppBarTab = ({ text }) => {
-    return <Pressable onPress={() => console.log(`${text} was clicked`)}>
-        <Text style={styles.text} >{text}</Text>
+const AppBarTab = ({ text, onPress }) => {
+  return (
+    <Pressable onPress={onPress}>
+      <Text style={styles.text}>{text}</Text>
     </Pressable>
+  );
 };
 
 export default AppBarTab;
